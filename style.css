@@ -1,0 +1,60 @@
+body {
+    background-image: url('images/background.jpg'); 
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; /* Ensure full-page coverage */
+    margin: 0;
+    padding: 0;
+}
+
+.custom-title{
+    color: #a04000;
+    font-weight: bold;
+    
+}
+.card {
+    background-color: #C1E1C1; 
+    margin: auto;
+}
+
+.custom-btn {
+    background-color: #a04000; 
+    color: white;              
+}
+
+.custom-btn:hover {
+    background-color: #cc5200; 
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.success-msg {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 2px solid #155724; /* Green border */
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.error-msg {
+    background-color: #ffcccc; /* Light red background */
+    color: #a00; /* Dark red text */
+    border: 2px solid #a00; /* Red border */
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
