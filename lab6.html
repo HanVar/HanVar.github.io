@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lab 6</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+<body class="text-center">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="lab6.html">Lab 6</a>
+            </div>
+            </div>
+        </div>
+        </nav>
+
+    <div class="container mt-4">
+        <!-- Button that triggers the REST API call -->
+        <h1 class="mb-4">Let's Learn about Cats!</h1>
+        <p>Click below to get some FUN facts about cats.</p>
+        <button class="btn btn-primary mb-3" onclick="getFacts()">Cat Fact Generator</button>
+        
+        <!-- Original image -->
+        <div class="d-flex justify-content-center">
+            <img id="photo" src="images/dog.jpg" alt="Dog Photo" class="img-fluid rounded mb-4" style="max-width: 300px;">
+        </div>
+
+        <!-- Fact table -->
+        <div class="table-responsive">
+            <table class="table table-bordered" id="factTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>factId</th>
+                        <th>fact</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Consume REST API using GET
+        const url = 'https://brianobruno.github.io/cats.json'; 
+        const options = 
+            { 
+                method: 'GET' ,
+            };
+
+        async function getFacts() {
+            try {
+                const response = await fetch(url, options);
+                const result = await response.text();
+                const myObj = JSON.parse(result);
+
+                // Sort facts array by factId
+                const sortedFacts = myObj.facts.sort(function(a, b) {return a.factId - b.factId});
+
+                // Populate the data into the table
+                const table = document.getElementById("factsTable");
+                const tableBody = document.getElementById("tableBody");
+                let rows = ""; 
+
+                sortedFacts.forEach(fact => {
+                    rows += `<tr><td>${fact.factId}</td><td>${fact.text}</td></tr>`;
+                });
+                tableBody.innerHTML = rows;
+
+                // Update photo with photo from API call
+                const catPhoto = document.getElementById("photo");
+                catPhoto.src = myObj.catPhoto;
+            } catch (error) {
+                console.error("Sorry! There seems to be an error getting your cat facts:", error);
+            }
+        }
+    </script>
+
+    <hr>
+    <p>Last updated on 31<sup>st</sup> Mar 2025 by Hannah Varughese</p>
+
+</body>
+</html>
