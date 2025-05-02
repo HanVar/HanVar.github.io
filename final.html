@@ -1,60 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Art Explorer - Art Institute of Chicago</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <title>Home | Art Explorer</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Script -->
+    <script src="finalScript.js"></script>
 </head>
-<body>
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Art Explorer</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="final.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="artwork.html">Artworks</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="exhibitions.html">Exhibitions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
-    <!-- Jumbotron Title and Subheader -->
-  <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-          <h1 class="mb-4">Welcome to the Art Explorer</h1>
-          <p class="lead">Discover stunning artwork from the Art Institute of Chicago using a public API.</p>
-          <p>Use the navigation menu to see featured pieces, search artworks, or browse exhibitions.</p>
+<body class="d-flex flex-column min-vh-100" style="background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);">
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="final.html">Art Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="final.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artwork.html">Artworks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="exhibitions.html">Exhibitions</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron Title and Subheader -->
+  <div class="jumbotron jumbotron-fluid p-5 text-center shadow-sm">
+    <div class="container">
+        <h1 class="display-4">Welcome to the Art Explorer</h1>
+    </div>
   </div>
 
-  <br> 
+  <!-- Hero Section -->
+  <section class="bg-light text-center p-3 rounded mb-4 shadow-sm">
+    <div class="container">
+      <p class="lead">Discover stunning artwork from the 
+        <a href="https://api.artic.edu/docs/#introduction">Art Institute of Chicago</a> 
+         using a public API.</p>
+      <p>Use the navigation menu to see featured pieces, search artworks, or browse exhibitions.</p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h2 class="mb-4">Featured Art</h2>
-    <p class = "lead"> Click on the art below to see more details.</p>
-    <div class="row row-cols-1 row-cols-md-1 g-4" id="featured-artworks"></div>
+  <!-- Featured Art Section -->
+  <div class="container mb-5">
+    <h2 class="mb-3 text-center"><i class="bi text-warning"></i> Featured Art</h2>
+    <p class="lead text-center mb-4">Click on the artwork below to see more details.</p>
+    <div class="row justify-content-center" id="featured-artworks"></div>
   </div>
 
-  <script src="finalScript.js"></script>
+  <!-- Featured Art Carousel
+<div class="container mb-5">
+  <h2 class="mb-3 text-center"><i class="bi text-warning"></i> Featured Art</h2>
+  <p class="lead text-center mb-4">Click on the artwork below to see more details.</p>
+
+  <div id="artCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="featured-artworks">
+     
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#artCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#artCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div> -->
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-auto">
+    <div class="container">
+      <small>2025 Art Explorer | Hannah Varughese | Built with ❤️ using the Art Institute of Chicago API</small>
+    </div>
+  </footer>
+
 </body>
 </html>
