@@ -24,7 +24,7 @@ function filterExhibitions(status) {
 
 // Fetch from API
 async function fetchExhibitions() {
-  const url = 'https://api.artic.edu/api/v1/exhibitions?limit=50&fields=id,title,aic_start_at,aic_end_at,short_description,image_url';
+  const url = 'https://api.artic.edu/api/v1/exhibitions?limit=100&fields=id,title,aic_start_at,aic_end_at,short_description,image_url';
   const options = {
     method: 'GET'
   };
@@ -55,7 +55,7 @@ function displayExhibitions(exhibitions) {
           <img src="${imgUrl}" class="card-img-top" alt="${ex.title}">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="exhibition-details.html?id=${ex.id}" class="text-decoration-none">${ex.title}</a>
+              ${ex.title}
             </h5>
             <p><strong>From:</strong> ${formatDate(ex.aic_start_at)}</p>
             <p><strong>To:</strong> ${formatDate(ex.aic_end_at)}</p>

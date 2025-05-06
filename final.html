@@ -34,7 +34,7 @@
             <a class="nav-link active" href="final.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="artwork.html">Artworks</a>
+            <a class="nav-link" href="artwork.html">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="exhibitions.html">Exhibitions</a>
@@ -56,27 +56,18 @@
     <div class="container">
       <p class="lead">Discover stunning artwork from the 
         <a href="https://api.artic.edu/docs/#introduction">Art Institute of Chicago</a> 
-         using a public API.</p>
-      <p>Use the navigation menu to see featured pieces, search artworks, or browse exhibitions.</p>
+         .</p>
+      <p>Check out the featured pieces below or use the navigation menu to search artworks and browse exhibitions.</p>
     </div>
   </section>
 
-  <!-- Featured Art Section -->
-  <div class="container mb-5">
-    <h2 class="mb-3 text-center"><i class="bi text-warning"></i> Featured Art</h2>
-    <p class="lead text-center mb-4">Click on the artwork below to see more details.</p>
-    <div class="row justify-content-center" id="featured-artworks"></div>
-  </div>
 
-  <!-- Featured Art Carousel
+  <!-- Featured Art Carousel -->
 <div class="container mb-5">
-  <h2 class="mb-3 text-center"><i class="bi text-warning"></i> Featured Art</h2>
+  <h2 class="mb-3 text-center">Featured Art</h2>
   <p class="lead text-center mb-4">Click on the artwork below to see more details.</p>
-
-  <div id="artCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" id="featured-artworks">
-     
-    </div>
+  <div id="artCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carouselItems"></div>
     <button class="carousel-control-prev" type="button" data-bs-target="#artCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -86,8 +77,15 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-</div> -->
+</div>
 
+
+  <!-- Featured Art Section -->
+  <!-- <div class="container mb-5">
+    <h2 class="mb-3 text-center"><i class="bi text-warning"></i> Featured Art</h2>
+    <p class="lead text-center mb-4">Click on the artwork below to see more details.</p>
+    <div class="row justify-content-center" id="featured-artworks"></div>
+  </div> -->
 
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3 mt-auto">

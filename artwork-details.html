@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link" href="final.html">Home</a>
-          <a class="nav-link" href="artwork.html">Artworks</a>
+          <a class="nav-link" href="artwork.html">Gallery</a>
           <a class="nav-link" href="exhibitions.html">Exhibitions</a>
         </div>
       </div>
@@ -37,7 +37,7 @@
   <main class="container mb-5 flex-grow-1">
     <!-- Back Button -->
     <div class="mb-3">
-      <a href="artwork.html" class="btn btn-outline-secondary">&larr; Go to Artworks</a>
+      <a href="artwork.html" class="btn btn-outline-secondary">&larr; Go to Gallery</a>
     </div>
 
     <!-- Artwork Details Section -->
@@ -79,10 +79,10 @@
               <h2>${art.title}</h2>
               <p><strong>Artist:</strong> ${art.artist_title || 'Unknown'}</p>
               <p><strong>Date:</strong> ${art.date_display || 'Unknown'}</p>
-              <p><strong>Medium:</strong> ${art.medium_display || '-'}</p>
-              <p><strong>Dimensions:</strong> ${art.dimensions || '-'}</p>
-              <p><strong>Credit Line:</strong> ${art.credit_line || '-'}</p>
-              <p><strong>Place of Origin:</strong> ${art.place_of_origin || '-'}</p>
+              <p><strong>Medium:</strong> ${art.medium_display || 'Unknown'}</p>
+              <p><strong>Dimensions:</strong> ${art.dimensions || 'Unknown'}</p>
+              <p><strong>Credit Line:</strong> ${art.credit_line || 'Unknown'}</p>
+              <p><strong>Place of Origin:</strong> ${art.place_of_origin || 'Unknown'}</p>
             </div>
           </div>
         `;

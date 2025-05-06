@@ -86,7 +86,7 @@ function displayArtworks(artworks) {
           <a href="artwork-details.html?id=${art.id}" class="text-decoration-none text-dark">
             <img src="${imgUrl}" class="card-img-top" alt="Artwork Image">
             <div class="card-body">
-              <h5 class="card-title">${art.title}</h5>
+              <h5 class="card-title">${art.title || "Unknown Title"}</h5>
               <p class="card-text">${art.artist_title || "Unknown Artist"}</p>
             </div>
           </a>
