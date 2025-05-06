@@ -51,17 +51,15 @@ function displayExhibitions(exhibitions) {
 
 return `
   <div class="col-md-6 col-lg-4 mb-4">
-    <a href="exhibition-details.html?id=${ex.id}" class="text-decoration-none text-dark">
-      <div class="card h-100 shadow-sm">
-        <img src="${imgUrl}" class="card-img-top" alt="${ex.title}">
-        <div class="card-body">
-          <h5 class="card-title">${ex.title}</h5>
-          <p><strong>From:</strong> ${formatDate(ex.aic_start_at)}</p>
-          <p><strong>To:</strong> ${formatDate(ex.aic_end_at)}</p>
-          <p class="card-text">${ex.short_description || 'No description available.'}</p>
-        </div>
+    <div class="card h-100 shadow-sm">
+      <img src="${imgUrl}" class="card-img-top" alt="${ex.title}">
+      <div class="card-body">
+        <h5 class="card-title">${ex.title}</h5>
+        <p><strong>From:</strong> ${formatDate(ex.aic_start_at)}</p>
+        <p><strong>To:</strong> ${formatDate(ex.aic_end_at)}</p>
+        <p class="card-text">${ex.short_description || 'No description available.'}</p>
       </div>
-    </a>
+    </div>
   </div>`;
   }).join('');
 }

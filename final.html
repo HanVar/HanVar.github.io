@@ -18,70 +18,46 @@
     <script src="finalScript.js"></script>
 </head>
 
-  <body class="d-flex flex-column min-vh-100" style="background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);">
+<body class="d-flex flex-column min-vh-100" style="background: linear-gradient(to bottom, #fdfcfb, #e2d1c3);">
 
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="final.html">Art Explorer</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="final.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="artwork.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="exhibitions.html">Exhibitions</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  
-    <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid bg-light p-4 text-center shadow-sm">
-      <div class="container">
-          <h1 class="display-4">Welcome to the Art Explorer</h1>
-          <p class="lead">
-            Your gateway to the rich and diverse collection of the Art Institute of Chicago. Browse through paintings, sculptures, photographs, and more—or explore curated exhibitions from one of the world’s top art museums.
-          </p>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="final.html">Art Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="final.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artwork.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="exhibitions.html">Exhibitions</a>
+          </li>
+        </ul>
       </div>
     </div>
-  
-  <!-- Feature Highlights -->
-  <div class="container text-center my-5">
-    <h2 class="mb-4">What You Can Do</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="h-100 px-3">
-          <h5 class="mb-2">🎨 Explore Artworks</h5>
-          <p>Browse over 100,000 pieces of art from across time and styles.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="h-100 px-3">
-          <h5 class="mb-2">🔍 Search the Collection</h5>
-          <p>Find artwork by title, artist, or medium using our search tool.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="h-100 px-3">
-          <h5 class="mb-2">🖼️ Discover Exhibitions</h5>
-          <p>View current and past exhibitions curated by experts.</p>
-        </div>
-      </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid bg-light p-4 text-center shadow-sm my-3">
+    <div class="container">
+      <h1 class="display-4">Welcome to the Art Explorer</h1>
+      <p class="lead">
+        Your gateway to the rich and diverse collection of the Art Institute of Chicago. Browse through paintings, sculptures, photographs, and more—or explore curated exhibitions from one of the world’s top art museums.
+      </p>
     </div>
   </div>
 
   <!-- Featured Art Carousel -->
-  <div class="container mb-5">
-    <h2 class="mb-3 text-center">Featured Art: Claude Monet</h2>
+  <div class="container my-3">
+    <h2 class="mb-3 text-center">Featured Artist: Claude Monet</h2>
+    <hr class="w-25 mx-auto my-3 border-secondary">
     <p class="lead text-center mb-3">
       The Art Institute of Chicago holds the largest collection of Monet paintings outside of Paris.
     </p>
@@ -99,16 +75,47 @@
       </button>
     </div>
   </div>
-    
-  
-    <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-3 mt-auto">
-      <div class="container">
-        <small>2025 Art Explorer | Hannah Varughese | Built with ❤️ using the 
-          <a href="https://api.artic.edu/docs/#introduction" target="_blank">Art Institute of Chicago API</a></small>
+
+  <!-- Feature Highlights -->
+  <div class="container text-center my-3">
+    <h2 class="mb-4">What You Can Do</h2>
+    <hr class="w-25 mx-auto mb-4 mt-3 border-secondary">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="h-100 px-3 shadow-bottom">
+          <h5 class="mb-2">🎨 Explore Artworks</h5>
+          <p>Browse over 100,000 pieces of art from across time and styles.</p>
+        </div>
       </div>
-    </footer>
+      <div class="col-md-4">
+        <div class="h-100 px-3 shadow-bottom">
+          <h5 class="mb-2">🔍 Search the Collection</h5>
+          <p>Find artwork by title, artist, or medium using our search tool.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="h-100 px-3 shadow-bottom">
+          <h5 class="mb-2">🖼️ Discover Exhibitions</h5>
+          <p>View current and past exhibitions curated by experts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .shadow-bottom {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
   
-  </body>
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-auto">
+    <div class="container">
+      <small>2025 Art Explorer | Hannah Varughese | Built with ❤️ using the 
+        <a href="https://api.artic.edu/docs/#introduction" target="_blank">Art Institute of Chicago API</a></small>
+    </div>
+  </footer>
+
+</body>
   
 </html>
